@@ -70,16 +70,17 @@ function App() {
       <div>
         <h2>Time Difference:</h2>
         {futureDate ? (
-          <ul>
-            <li>Milliseconds: {timeDifference.milliseconds}</li>
-            <li>Seconds: {timeDifference.seconds}</li>
-            <li>Minutes: {timeDifference.minutes}</li>
-            <li>Hours: {timeDifference.hours}</li>
-            <li>Days: {timeDifference.days}</li>
-            <li>Weeks: {timeDifference.weeks}</li>
-            <li>Months: {timeDifference.months}</li>
-            <li>Years: {timeDifference.years}</li>
-          </ul>
+          <div>
+            <p>Future Date: {futureDate}</p>
+            <p>Milliseconds: {timeDifference.milliseconds}</p>
+            <p>Seconds: {timeDifference.seconds}</p>
+            <p>Minutes: {timeDifference.minutes}</p>
+            <p>Hours: {timeDifference.hours}</p>
+            <p>Days: {timeDifference.days}</p>
+            <p>Weeks: {timeDifference.weeks}</p>
+            <p>Months: {timeDifference.months}</p>
+            <p>Years: {timeDifference.years}</p>
+          </div>
         ) : (
           <p>Enter a future date above to calculate the difference.</p>
         )}
