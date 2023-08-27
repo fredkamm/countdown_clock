@@ -51,7 +51,7 @@ export default {
             large:
               "0px 0px 30px 0px rgb(0 0 0 / 0.04), 0px 30px 60px 0px rgb(0 0 0 / 0.12), 0px 0px 1px 0px rgb(0 0 0 / 0.3)",
           },
-          textColor: "#333", // Text color for the light theme
+          textColor: "#b1b0b0;", // Text color for the light theme
         },
       },
       dark: {

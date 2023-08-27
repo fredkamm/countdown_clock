@@ -13,9 +13,14 @@ const DarkMode = () => {
       <Switch
         defaultSelected={isDarkMode}
         size="lg"
-        color="secondary"
-        startContent={<MoonIcon />}
-        endContent={<SunIcon />}
+        color="success"
+        thumbIcon={({ isSelected, className }) =>
+        isSelected ? (
+          <SunIcon className={className} />
+        ) : (
+          <MoonIcon className={className} />
+        )
+      }
         onChange={toggleDarkMode}
       >
         {isDarkMode ? "Dark mode" : "Light mode"}
