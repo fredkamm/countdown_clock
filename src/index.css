@@ -60,6 +60,56 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+.custom-calender {
+  border: 2px solid #333;
+  border-radius: 5px;
+  padding: 8px;
+  /* Add more custom styles as needed */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.2s ease-in-out;
+}
+
+.custom-calender:focus {
+  border-color: #646cff;
+}
+
+/* Style the date and time picker in WebKit-based browsers */
+input[type="datetime-local"]::-webkit-datetime-edit {
+  /* Example styles for the date and time fields */
+  padding: 4px; /* Padding for fields */
+  border: 1px solid #ccc;
+  color: #ccc; /* Border for fields */
+  border-radius: 4px; /* Border radius for fields */
+  margin: 2px; /* Margin between fields */
+  background-color: transparent; /* Background color for fields */
+}
+
+/* Style the wrapper for date and time fields */
+input[type="datetime-local"]::-webkit-datetime-edit-fields-wrapper {
+  display: flex; /* Display fields in a row */
+}
+
+/* Dark Theme Styles */
+.dark {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Light Theme Styles */
+.light {
+  background-color: #fff;
+  color: #000;
+}
+
+/* Example: Styles for date and time elements in both themes */
+.date {
+  font-size: 24px;
+}
+
+.time {
+  font-size: 36px;
+}
+
 
 
 @media (prefers-color-scheme: light) {

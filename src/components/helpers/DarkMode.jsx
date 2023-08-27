@@ -1,41 +1,24 @@
 /* eslint-disable no-unused-vars */
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Switch } from "@nextui-org/react";
 import { MoonIcon } from "./MoonIcon";
 import { SunIcon } from "./SunIcon";
+import { useTheme } from "./ThemeProvider"; // Import the useTheme hook
 
 const DarkMode = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
-
-  // Function to toggle dark mode
-  const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
-  };
-
-  // Apply dark mode on initial render
-  useEffect(() => {
-    const body = document.body;
-    if (isDarkMode) {
-      body.classList.add("dark");
-      body.classList.remove("light");
-
-    } else {
-      body.classList.add("light");
-      body.classList.remove("dark");
-    }
-  }, [isDarkMode]);
+  const { isDarkMode, toggleDarkMode } = useTheme(); // Access theme context
 
   return (
-    <div className={`container mx-auto h-full flex items-center ${isDarkMode ? 'darkMode' : 'lightMode'}`}>
+    <div className="container mx-auto h-full flex items-center">
       <Switch
         defaultSelected={isDarkMode}
         size="lg"
-        color="success"
-        startContent={<SunIcon />}
-        endContent={<MoonIcon />}
+        color="secondary"
+        startContent={<MoonIcon />}
+        endContent={<SunIcon />}
         onChange={toggleDarkMode}
       >
-        {isDarkMode ? "Light mode" : "Dark mode"}
+        {isDarkMode ? "Dark mode" : "Light mode"}
       </Switch>
     </div>
   );

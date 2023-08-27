@@ -46,7 +46,7 @@ export default function Body() {
     <>
       <div className="card">
         <input
-          className="datetime-wrapper"
+          className="datetime-wrapper custom-calender"
           type="datetime-local"
           value={futureDate}
           onChange={handleFutureDateChange}

@@ -1,9 +1,14 @@
-import { useState, useEffect } from "react";
+/* eslint-disable no-unused-vars */
+import React, { useState, useEffect } from "react";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
+import { useTheme } from "./helpers/ThemeProvider"; // Import the useTheme hook
+
 dayjs.extend(relativeTime);
 
 export default function Clock() {
+  const { isDarkMode } = useTheme(); // Access theme context
+
   const [currentDate, setCurrentDate] = useState("");
   const [currentTime, setCurrentTime] = useState("");
 
@@ -19,7 +24,7 @@ export default function Clock() {
   }, []);
 
   return (
-    <div className="header">
+    <div className={`header ${isDarkMode ? "dark" : "light"}`}>
       <h1>{currentDate}</h1>
       <h1>{currentTime}</h1>
     </div>
