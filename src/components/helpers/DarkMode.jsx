@@ -13,12 +13,12 @@ const DarkMode = () => {
       <Switch
         defaultSelected={isDarkMode}
         size="lg"
-        color="success"
+        color="secondary"
         thumbIcon={({ isSelected, className }) =>
         isSelected ? (
-          <SunIcon className={className} />
-        ) : (
           <MoonIcon className={className} />
+          ) : (
+          <SunIcon className={className} />
         )
       }
         onChange={toggleDarkMode}
